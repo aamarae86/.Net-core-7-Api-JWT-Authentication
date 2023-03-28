@@ -65,6 +65,7 @@ namespace ApiAuthentication.Controllers
             }
         }
 
+
         private async Task<UserInfo> GetUser(string email, string password)
         {
             return await _context.UserInfos.FirstOrDefaultAsync(u => u.Email == email && u.Password == password);
